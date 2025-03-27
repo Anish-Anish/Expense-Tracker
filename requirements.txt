@@ -5,3 +5,4 @@ streamlit
 requests
 flask-cors
 matplotlib
+openpyxl
