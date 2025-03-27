@@ -24,8 +24,9 @@ if st.button("View Expenses"):
     df = fetch_records()
     json_data={"data":df.to_dict(orient="records")}
 
-    response=requests.post(
-        "http://127.0.0.1:5001/view_data",
+   BACKEND_URL = "https://expense-tracker-5-vk1n.onrender.com"
+    response = requests.post(
+        f"{BACKEND_URL}/view_data",
         json=json_data,
         proxies={"http": None, "https": None}
     )
