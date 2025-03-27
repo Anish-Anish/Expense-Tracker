@@ -24,7 +24,7 @@ if st.button("View Expenses"):
     df = fetch_records()
     json_data={"data":df.to_dict(orient="records")}
 
-   BACKEND_URL = "https://expense-tracker-5-vk1n.onrender.com"
+    BACKEND_URL = "https://expense-tracker-5-vk1n.onrender.com"
     response = requests.post(
         f"{BACKEND_URL}/view_data",
         json=json_data,
@@ -109,4 +109,3 @@ if st.sidebar.button("View Details"):
             st.pyplot(fig)
     else:
         st.warning("You do not have any transactions")
-
